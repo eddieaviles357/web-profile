@@ -1,0 +1,79 @@
+/*
+0 - 600px:    Phone
+600 - 900px:  Tablet Portrait
+900 - 1200px; Tablet landscape
+[1200px - 1800px] is where normal styles are applied
+1800px+:      Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+::-moz-selection {
+  background-color: #556ac5;
+  color: #fff;
+}
+
+::selection {
+  background-color: #556ac5;
+  color: #fff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.navigation {
+  color: #fff;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvYWJzdHJhY3RzL19taXhpbnMuc2NzcyIsIi4uL3Nhc3MvYmFzZS9fYmFzZS5zY3NzIiwic3R5bGUuY29uY2F0LmNzcyIsIi4uL3Nhc3MvYWJzdHJhY3RzL192YXJpYWJsZXMuc2NzcyIsIi4uL3Nhc3MvYmFzZS9fdHlwb2dyYXBoeS5zY3NzIiwiLi4vc2Fzcy9iYXNlL191dGlsaXRpZXMuc2NzcyIsIi4uL3Nhc3MvbGF5b3V0L19uYXZpZ2F0aW9uLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBc0JBOzs7Ozs7Ozs7Ozs7Ozs7O0NBQUE7QUN0QkE7OztFQUdFLFVBQUE7RUFDQSxTQUFBO0VBQ0EsbUJBQUE7QUNrQkY7O0FEZkE7RUFHRSxnQkFBQTtBQ2dCRjtBRm9CSTtFQ3ZDSjtJQVFJLGNBQUE7RUNlRjtBQUNGO0FGbUJJO0VDM0NKO0lBYUksaUJBQUE7RUNlRjtBQUNGO0FGY0k7RUMzQ0o7SUFpQkksY0FBQTtFQ2dCRjtBQUNGOztBRGJBO0VBQ0Usc0JBQUE7QUNnQkY7QUZDSTtFQ2xCSjtJQUtJLFVBQUE7RUNnQkY7QUFDRjs7QURiQTtFQUNFLHlCRXRDYztFRnVDZCxXRXRCWTtBRHNDZDs7QURsQkE7RUFDRSx5QkV0Q2M7RUZ1Q2QsV0V0Qlk7QURzQ2Q7O0FFeERBO0VBQ0UsK0JBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsV0RVa0I7QURpRHBCOztBRy9EQTtFQUNFLGtCQUFBO0FIa0VGOztBSW5FQTtFQUNFLFdIaUJZO0FEcURkIiwiZmlsZSI6InN0eWxlLnByZWZpeC5jc3MifQ== */
