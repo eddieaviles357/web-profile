@@ -1,0 +1,10 @@
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-template-rows: min-content auto;
+}
+
+.grid-item {
+  grid-column: span $grid-columns;
+}
