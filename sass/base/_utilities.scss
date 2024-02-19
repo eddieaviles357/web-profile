@@ -9,3 +9,49 @@
 .right-text {
   text-align: right;
 }
+
+.header-font {
+  font-family: $header-font;
+}
+
+.bg-primary {
+  background: $color-primary;
+}
+
+.bg-primary-light {
+  background: $color-primary-light;
+}
+
+.bg-primary-dark {
+  background: $color-primary-dark;
+}
+
+.bg-secondary-light {
+  background: $color-secondary-light;
+}
+
+.bg-secondary-dark {
+  background: $color-secondary-dark;
+}
+
+.bg-tertiary-light {
+  background: $color-tertiary-light;
+}
+
+.bg-tertiary-dark {
+  background: $color-tertiary-dark;
+}
+
+.bg-black {
+background: $color-black;
+}
+.bg-white {
+  background: $color-white;
+}
+// $color-grey-light-1;
+// $color-grey-light-2;
+
+// $color-grey-dark-1;
+// $color-grey-dark-2;
+// $color-grey-dark-3;
+
