@@ -1,17 +1,28 @@
-.section-projects {
-  grid-column: span 8;
-  background-color: $color-primary;
-  padding: 25rem 0;
-}
+.section-projects{
+  padding: 5rem 0;
 
-.section-about {
-  grid-column: span 8;;
+  &__header {
+    font-size: 7.5rem;
+    color: $color-black;
+  }
+
+  // &__gallery--item-1 {
+
+  // }
+
+  &__gallery--img-1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; 
+  }
+}
+.section-about{
   background-color: $color-secondary-light;
-  padding: 25rem 0;
+  padding: 5rem 0;
 }
 
-.section-contact {
-  grid-column: span 8;
+.section-contact{
   background-color: $color-primary;
-  padding: 25rem 0;
-}
+  padding: 5rem 0;
+} 
