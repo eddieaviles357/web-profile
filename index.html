@@ -27,41 +27,48 @@
 
 
     <!-- projects -->
-    <section class="grid-item bg-secondary-light">
+    <section class="projects grid-item bg-secondary-light">
 
-      <!-- projects grid -->
-      <div class="section-projects grid-item">
+      <!-- projects image box -->
+      <div class="section-projects">
         <!-- projects header text -->
         <h2 class="section-projects__header center-text header-font">Projects</h2>
         <!-- projects cards -->
-        <figure class="section-projects__gallery section-projects__gallery--item-1">
-          <img 
-            class="section-projects__gallery--img-1" 
-            src="img/mornoonights-img.jpeg" 
-            alt="MorNooNightsNews news image" 
-            />
-          <figcaption>MorNooNightsNews</figcaption>
-        </figure>
-        <figure class="section-projects__gallery section-projects__gallery--item-1">
-          <img 
-            class="section-projects__gallery--img-1" 
-            src="img/jeopardy.jpeg" 
-            alt="Jeopardy image" 
-            />
-          <figcaption>Jeopardy</figcaption>
-        </figure>
-        <figure class="section-projects__gallery section-projects__gallery--item-1">
-          <img 
-            class="section-projects__gallery--img-1" 
-            src="img/jeopardy.jpeg" 
-            alt="Jeopardy image" 
-            />
-          <figcaption>Profile</figcaption>
-        </figure>
+        <div class="gallery">
+          <figure class="gallery__item">
+            <img 
+              class="gallery__item--img active" 
+              src="img/jeopardy.jpeg" 
+              alt="MorNooNightsNews news image"  
+              />
+            <figcaption class="gallery__description">MorNooNightsNews is an new aggregator web page that collects news articles. There is a
+              login and sign up page. Once user is authenticated they will be able to view top most relevant articles.
+              When clicking any articles users will not have to worry about losing what they read before since 5 articles 
+              will be addeded to their recents.
+            </figcaption>
+          </figure>
+          <figure class="gallery__item gallery--top">
+            <img 
+              class="gallery__item--img" 
+              src="img/jeopardy.jpeg" 
+              alt="Jeopardy image" 
+              />
+            <figcaption class="gallery__description">Jeopardy</figcaption>
+          </figure>
+          <figure class="gallery__item gallery--bottom">
+            <img 
+              class="gallery__item--img" 
+              src="img/jeopardy.jpeg" 
+              alt="Jeopardy image" 
+              />
+            <figcaption class="gallery__description">Profile</figcaption>
+          </figure>
+        </div>
       </div>
+      <!-- projects image box END -->
       
     </section>
-
+    <!-- projects END -->
 
     <!-- about -->
     <section class="section-about grid-item">
@@ -69,7 +76,7 @@
       <div>2</div>
       <div>3</div>
     </section>
-
+    <!-- about END -->
 
     <!-- contact -->
     <section class="section-contact grid-item">
@@ -77,7 +84,7 @@
       <div>2</div>
       <div>3</div>
     </section>
-
+    <!-- contact END -->
 
   </main>
 
