@@ -8,20 +8,17 @@ body {
 
 .header {
   color: $color-secondary-light;
-  font-family: 'Protest Riot', sans-serif;
   font-weight: 400;
 
   &-title--name {
     font-size: 10rem;
     letter-spacing: 3rem;
-    text-align: center;
   }
   
   &-title--sub {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 1rem;
-    text-align: left;
     text-shadow: .1rem 1rem 1rem $color-black;
   }
   
