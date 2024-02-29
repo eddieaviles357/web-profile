@@ -1,3 +1,4 @@
+// TEXT_ALIGN
 .center-text {
   text-align: center;
 }
@@ -10,10 +11,13 @@
   text-align: right;
 }
 
+
+// HEADER_FONT
 .header-font {
   font-family: $header-font;
 }
 
+// BACKGROUND
 .bg-primary {
   background: $color-primary;
 }
@@ -55,3 +59,16 @@ background: $color-black;
 // $color-grey-dark-2;
 // $color-grey-dark-3;
 
+// OPACITY
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+// PADDING
+.padding-top-5 {
+  padding-top: 5rem;
+}
