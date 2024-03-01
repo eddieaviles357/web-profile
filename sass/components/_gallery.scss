@@ -12,9 +12,7 @@
     width: 100%;
     
     justify-content: space-around;
-    // padding: 5rem 0;
-
-    // opacity: .5;
+    transition: all .5s ease-in-out;
 
 
     &--img {
@@ -71,20 +69,20 @@
     transform: scale(.8);
     z-index: 1;
 
-    & > :nth-child(2) {
-      opacity: 0;
-    }
+    // & > :nth-child(2) {
+    //   opacity: 0;
+    // }
   }
   
   &--bottom {
-    bottom: -33rem;
+    top: 13rem;
     left: 3rem;
     transform: scale(.8);
     z-index: 0;
     
-    & > :nth-child(2) {
-      opacity: 0;
-    }
+    // & > :nth-child(2) {
+    //   opacity: 0;
+    // }
   }
 }
 
