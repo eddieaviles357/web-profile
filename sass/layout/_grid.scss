@@ -3,6 +3,8 @@
   display: grid;
   grid-template-columns: repeat($grid-columns, 1fr);
   grid-template-rows: min-content auto;
+
+  overflow: hidden;
 }
 
 .grid-item {
