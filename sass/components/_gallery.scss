@@ -4,6 +4,9 @@
   position: relative;
   width: 100%;
 
+  // experimental
+  perspective: 10rem;
+
   &__item {
     position: absolute;
     display: flex;
@@ -20,6 +23,7 @@
       object-fit: cover;
       border-radius: 1rem;
       box-shadow: 0 0 3rem -1rem $color-black;
+      transition: all .5s ease-in-out;
     }
     
   }
@@ -69,6 +73,9 @@
     transform: scale(.8);
     z-index: 1;
 
+    & > img {
+      transform: rotate(-10deg);
+    }
     // & > :nth-child(2) {
     //   opacity: 0;
     // }
@@ -80,6 +87,9 @@
     transform: scale(.8);
     z-index: 0;
     
+    & > img {
+      transform: rotate(10deg);
+    }
     // & > :nth-child(2) {
     //   opacity: 0;
     // }
@@ -93,13 +103,10 @@
   opacity: 1;
   z-index: 2;
 
-  // & > :nth-child(1) {
-  //   box-shadow: 1.1rem 1.1rem $color-black, 2.2rem 2.2rem $color-grey-dark-2;
-  // }
-}
+  // we dont need any events on the active element
+  pointer-events: none;
 
-// .gallery--top > .gallery__item--img {
-//   position: absolute;
-//   top: -4rem;
-//   border: 3px solid red;
-// }
+  & > img {
+    transform: rotate(0);
+  }
+}
