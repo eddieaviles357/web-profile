@@ -1,18 +1,32 @@
-.section-projects{
+.projects {
+
+  &__header {
+    font-size: 7.5rem;
+    color: $color-primary-light;
+    padding-bottom: 5rem;
+    text-shadow: .2rem .2rem black;
+  }
+
+}
+
+.about {
+  padding: 5rem 0;
 
   &__header {
     font-size: 7.5rem;
     color: $color-black;
     padding-bottom: 5rem;
+    text-shadow: .2rem .2rem $color-white;
   }
-
-}
-.section-about{
-  background-color: $color-secondary-dark;
-  padding: 5rem 0;
 }
 
-.section-contact{
-  background-color: $color-primary;
+.contact {
   padding: 5rem 0;
-} 
+
+  &__header {
+    font-size: 7.5rem;
+    color: $color-secondary-dark;
+    padding-bottom: 5rem;
+    text-shadow: .2rem .2rem black;
+  }
+}
