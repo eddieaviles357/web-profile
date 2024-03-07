@@ -1,0 +1,22 @@
+.about {
+    width: 100%;
+    position: relative;
+    max-height: 75rem;
+    height: 90vh;
+    min-height: 75rem;
+
+
+    &__section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        &-img {
+            width: 40rem;
+        }
+
+        &-description {
+            width: 50%;
+        }
+    }
+}
