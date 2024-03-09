@@ -22,11 +22,46 @@
 
   &__section {
     &-img {
+      transform: scaleX(-1);
+      filter: sepia(.5);
+      padding: 1rem;
+      border: 1rem solid $color-secondary-light;
       border-radius: 50%;
     }
 
-    // &-description {
-    // }
+    &-description {
+      font-size: 1.6rem;
+      padding: 3rem;
+
+      border-radius: 1rem;
+
+      background-color: $color-secondary-light;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        transform: rotate(3deg);
+        background: $color-tertiary-light; 
+        z-index: -1;
+      }
+  
+      &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 1rem;
+        box-shadow: 0 0 3rem -1rem $color-black;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
