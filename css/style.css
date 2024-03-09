@@ -15,7 +15,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
-@import 'https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 *,
 *::after,
 *::before {
@@ -58,7 +58,7 @@ body {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   line-height: 1.7;
 }
@@ -266,11 +266,30 @@ body {
 .parallax {
   min-height: 100%;
   width: 100%;
-  background-image: url("/img/dual-monitors.jpg");
+  background-image: url("/img/header-main.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.about {
+  width: 100%;
+  position: relative;
+  max-height: 75rem;
+  height: 90vh;
+  min-height: 75rem;
+}
+.about__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.about__section-img {
+  width: 40rem;
+}
+.about__section-description {
+  width: 50%;
 }
 
 .grid-container {
@@ -308,6 +327,7 @@ body {
   justify-content: space-around;
 }
 .header-title--name {
+  position: relative;
   display: inherit;
 }
 .header-title--sub {
@@ -320,25 +340,42 @@ body {
 .projects {
   width: 100%;
   position: relative;
+  max-height: 75rem;
   height: 90vh;
   min-height: 75rem;
-  padding: 5rem 3rem;
 }
 
-.section-projects__header {
+.projects {
+  padding: 5rem 3rem;
+}
+.projects__header {
+  font-size: 7.5rem;
+  color: #726fd5;
+  padding-bottom: 5rem;
+  text-shadow: 0.2rem 0.2rem black;
+}
+
+.about {
+  padding: 5rem 3rem;
+}
+.about__header {
   font-size: 7.5rem;
   color: #000;
   padding-bottom: 5rem;
+  text-shadow: 0.2rem 0.2rem #fff;
+}
+.about__section-img {
+  border-radius: 50%;
 }
 
-.section-about {
-  background-color: #f1d032;
+.contact {
   padding: 5rem 0;
 }
-
-.section-contact {
-  background-color: #556ac5;
-  padding: 5rem 0;
+.contact__header {
+  font-size: 7.5rem;
+  color: #f1d032;
+  padding-bottom: 5rem;
+  text-shadow: 0.2rem 0.2rem black;
 }
 
 /*# sourceMappingURL=style.css.map */
