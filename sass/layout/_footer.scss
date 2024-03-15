@@ -1,3 +1,38 @@
 .footer {
-  
+    width: 100%;
+    padding: 5rem 3rem;
+    background-color: $color-black;
+    color: $color-white;
+
+    &__header {
+        font-size: 3.5rem;
+        text-align: center;
+        padding: 0 0 10rem 0;
+    }
+}
+
+.footer__nav {
+
+    &-links {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        font-size: 1.6rem;
+
+        &--item:last-child {
+            display: flex;
+        }
+    }
+
+}
+
+.clipboard {
+    margin-left: .5rem;
+}
+
+.social {
+    width: 3.2rem;
+    fill: $color-white;
 }
