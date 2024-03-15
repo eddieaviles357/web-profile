@@ -301,6 +301,38 @@ body {
   width: 50%;
 }
 
+.footer {
+  width: 100%;
+  padding: 5rem 3rem;
+  background-color: #000;
+  color: #fff;
+}
+.footer__header {
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 0 0 10rem 0;
+}
+
+.footer__nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.6rem;
+}
+.footer__nav-links--item:last-child {
+  display: flex;
+}
+
+.clipboard {
+  margin-left: 0.5rem;
+}
+
+.social {
+  width: 3.2rem;
+  fill: #fff;
+}
+
 .grid-container {
   width: 100%;
   display: grid;
