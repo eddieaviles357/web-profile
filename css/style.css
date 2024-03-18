@@ -304,13 +304,14 @@ body {
 .footer {
   width: 100%;
   padding: 5rem 3rem;
-  background-color: #000;
+  background-color: #333;
   color: #fff;
 }
 .footer__header {
   font-size: 3.5rem;
   text-align: center;
-  padding: 0 0 10rem 0;
+  padding-bottom: 5rem;
+  color: #f1dda6;
 }
 
 .footer__nav-links {
@@ -320,8 +321,40 @@ body {
   justify-content: space-around;
   font-size: 1.6rem;
 }
-.footer__nav-links--item:last-child {
+.footer__nav-links--item {
   display: flex;
+  position: relative;
+  z-index: 0;
+}
+.footer__nav-links--item:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+  transform: scale(1.3);
+  box-shadow: 0 0 5rem -0.5rem #f1dda6;
+}
+.footer__nav-links--item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #f1dda6;
+  width: 5rem;
+  height: 5rem;
+  transform: translate(-50%, -50%);
+  z-index: -8;
+  border-radius: 0.3rem;
+}
+.footer__nav-links--item::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #000;
+  width: 5rem;
+  height: 5rem;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 0.3rem;
 }
 
 .clipboard {
@@ -330,7 +363,17 @@ body {
 
 .social {
   width: 3.2rem;
+  fill: #f1dda6;
+  stroke: #000;
+  stroke-width: 1rem;
+}
+
+.copyright {
   fill: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #f1dda6;
+  padding-top: 5rem;
 }
 
 .grid-container {
