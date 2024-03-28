@@ -24,7 +24,9 @@
     &--name {
       position: relative;
       display: inline-block;
-
+      line-height: 12rem;
+      letter-spacing: -1rem;
+      font-size: 15rem;
     }
 
 
@@ -33,6 +35,7 @@
       width: 50%;
       padding: 1rem;
       background-color: #38383855;
+      align-self: end;
     }
   }
 
