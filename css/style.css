@@ -70,6 +70,11 @@ body {
 .header-title--name {
   font-size: 10rem;
   letter-spacing: 3rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%23726fd5' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%23f1dda6'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%23f1dda6'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23f35c5c'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .header-title--sub {
   font-size: 2rem;
@@ -140,6 +145,10 @@ body {
 
 .padding-top-5 {
   padding-top: 5rem;
+}
+
+.capitalize {
+  text-transform: uppercase;
 }
 
 .btn {
@@ -267,9 +276,9 @@ body {
 .parallax {
   min-height: 100%;
   width: 100%;
-  background-image: url("/img/header-main.jpg");
+  background-image: linear-gradient(to right bottom, rgba(114, 111, 213, 0.6), rgba(47, 40, 180, 0.3)), url("/img/header-main.jpg");
   background-attachment: fixed;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -415,13 +424,17 @@ body {
 }
 .header-title--name {
   position: relative;
-  display: inherit;
+  display: inline-block;
+  line-height: 12rem;
+  letter-spacing: -1rem;
+  font-size: 15rem;
 }
 .header-title--sub {
   display: inherit;
   width: 50%;
   padding: 1rem;
   background-color: rgba(56, 56, 56, 0.3333333333);
+  align-self: end;
 }
 
 .projects {
