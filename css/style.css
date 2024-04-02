@@ -16,6 +16,16 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@keyframes line-height-animation {
+  0% {
+    opacity: 0;
+    line-height: 0rem;
+  }
+  100% {
+    opacity: 1;
+    line-height: 4rem;
+  }
+}
 *,
 *::after,
 *::before {
@@ -26,6 +36,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 @media only screen and (max-width: 56.25em) {
   html {
@@ -57,6 +68,14 @@ body {
   color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited, a:hover, a:active {
+  color: inherit;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -70,17 +89,11 @@ body {
 .header-title--name {
   font-size: 10rem;
   letter-spacing: 3rem;
-  background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%23726fd5' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%23f1dda6'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%23f1dda6'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23f35c5c'/%3E%3C/g%3E%3C/svg%3E%0A");
-  background-position: center;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
 }
 .header-title--sub {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 500;
   letter-spacing: 1rem;
-  text-shadow: 0.1rem 1rem 1rem #000;
 }
 
 .center-text {
@@ -405,8 +418,10 @@ body {
   height: 80vh;
   min-height: 50rem;
   width: 100%;
+  margin-bottom: 5rem;
 }
 .header__text-box {
+  margin-top: 5rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -417,6 +432,7 @@ body {
 }
 .header-title {
   height: 100%;
+  min-height: 50rem;
   display: flex;
   margin: 0 3rem;
   flex-direction: column;
@@ -428,13 +444,50 @@ body {
   line-height: 12rem;
   letter-spacing: -1rem;
   font-size: 15rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%23726fd5' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%23f1dda6'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%23f1dda6'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23f35c5c'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .header-title--sub {
   display: inherit;
   width: 50%;
   padding: 1rem;
-  background-color: rgba(56, 56, 56, 0.3333333333);
+  min-height: 18rem;
   align-self: end;
+  line-height: 0rem;
+  transition: all 1s ease-in-out;
+  animation: line-height-animation 1s ease-in-out 1 both;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  height: 5rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%23726fd5' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%23f1dda6'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%23f1dda6'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23f35c5c'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 25%;
+  font-size: 2rem;
+  list-style: none;
+}
+.nav-menu__items:hover {
+  transition: all 0.2s;
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.1rem black;
+}
+
+.logo {
+  color: black !important;
+  font-size: 2rem;
 }
 
 .projects {
