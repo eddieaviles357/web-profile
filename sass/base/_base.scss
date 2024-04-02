@@ -25,6 +25,7 @@ html {
   @include respond(tab-land) {
     font-size: 75%;
   }
+  scroll-behavior: smooth;
 }
 
 body {
@@ -39,4 +40,12 @@ body {
 ::selection {
   background-color: $color-primary;
   color: $color-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited, a:hover, a:active {
+  color: inherit;
 }
