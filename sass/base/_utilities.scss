@@ -1,3 +1,10 @@
+// CONTAINER MAX WIDTH
+.container {
+  margin: 0 auto;
+  max-width: 132rem;
+  height: 100%;
+}
+
 // TEXT_ALIGN
 .center-text {
   text-align: center;
@@ -77,5 +84,5 @@
 
 // TEXT
 .capitalize {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
