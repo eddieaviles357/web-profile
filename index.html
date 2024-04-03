@@ -18,25 +18,30 @@
 
     <!-- Navigation -->
     <nav class="navigation">
-      <a class="logo" href="#">EA</a>
-      <!-- Nav items -->
-      <ul class="nav-menu">
-        <li class="nav-menu__items"><a href="#projects">projects</a></li>
-        <li class="nav-menu__items"><a href="#about">about</a></li>
-        <li class="nav-menu__items"><a href="#contact">contact</a></li>
-      </ul>
-      <!-- end Nav items -->
-      
+      <div class="navigation__container">
+        <a class="logo" href="#">EA</a>
+        <!-- Nav items -->
+        <ul class="nav-menu">
+          <li class="nav-menu__items"><a href="#projects">projects</a></li>
+          <li class="nav-menu__items"><a href="#about">about</a></li>
+          <li class="nav-menu__items"><a href="#contact">contact</a></li>
+        </ul>
+        <!-- end Nav items -->
+
+      </div>
+
     </nav>
     <!-- End navigation -->
     <div class="parallax"></div>
     <!-- header text -->
     <div class="header__text-box">
-      <h1 class="header-title center-text">
-        <span class="header-title--name left-text header-font capitalize">Full-Stack <br>Web Dev</span>
-        <p class="header-title--sub left-text">Lets make and create something memorable with the web that will last
-          for many years</p>
-      </h1>
+      <div class="container">
+        <h1 class="header-title center-text">
+          <span class="header-title--name left-text header-font capitalize">Full-Stack <br>Web Dev</span>
+          <p class="header-title--sub left-text">Lets make and create something memorable with the web that will last
+            for many years</p>
+        </h1>
+      </div>
     </div>
 
   </header>
@@ -46,54 +51,60 @@
 
     <!-- projects -->
     <section class="projects grid-item bg-secondary-light" id="projects">
+      <div class="container">
+        <h2 class="projects__header center-text header-font">Projects</h2>
 
-      <h2 class="projects__header center-text header-font">Projects</h2>
-
-      <!-- projects image box -->
-      <div class="section-projects padding-top-5">
-        <!-- projects cards -->
-        <div class="gallery" id="gallery">
-          <figure class="gallery__item active">
-            <img class="gallery__item--img opacity-100" src="img/mornoonights-img.jpeg"
-              alt="MorNooNightsNews news image" />
-            <figcaption class="gallery__description">MorNooNightsNews is an new aggregator web page that collects news
-              articles. There is a
-              login and sign up page. Once user is authenticated they will be able to view top most relevant articles.
-              When clicking any articles users will not have to worry about losing what they read before since 5
-              articles
-              will be added to their recents.
-            </figcaption>
-          </figure>
-          <figure class="gallery__item gallery--top">
-            <img class="gallery__item--img opacity-50" src="img/jeopardy.jpeg" alt="Jeopardy image" />
-            <figcaption class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              nobis quibusdam maxime assumenda fugit aliquam quisquam adipisci, aliquid corporis tenetur sint quia unde,
-              veniam, repudiandae dolor mol</figcaption>
-          </figure>
-          <figure class="gallery__item gallery--bottom">
-            <img class="gallery__item--img opacity-50" src="img/react-code.jpg" alt="Jeopardy image" />
-            <figcaption class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-              quos magnam aperiam placeat voluptatum excepturi omnis. Hic repudiandae ipsam repellat doloremque fugiat
-              officia iusto deleniti amet, assumenda debitis perferendis? Placeat?</figcaption>
-          </figure>
+        <!-- projects image box -->
+        <div class="section-projects padding-top-5">
+          <!-- projects cards -->
+          <div class="gallery" id="gallery">
+            <figure class="gallery__item active">
+              <img class="gallery__item--img opacity-100" src="img/mornoonights-img.jpeg"
+                alt="MorNooNightsNews news image" />
+              <figcaption class="gallery__description">MorNooNightsNews is an new aggregator web page that collects news
+                articles. There is a
+                login and sign up page. Once user is authenticated they will be able to view top most relevant articles.
+                When clicking any articles users will not have to worry about losing what they read before since 5
+                articles
+                will be added to their recents.
+              </figcaption>
+            </figure>
+            <figure class="gallery__item gallery--top">
+              <img class="gallery__item--img opacity-50" src="img/jeopardy.jpeg" alt="Jeopardy image" />
+              <figcaption class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                nobis quibusdam maxime assumenda fugit aliquam quisquam adipisci, aliquid corporis tenetur sint quia
+                unde,
+                veniam, repudiandae dolor mol</figcaption>
+            </figure>
+            <figure class="gallery__item gallery--bottom">
+              <img class="gallery__item--img opacity-50" src="img/react-code.jpg" alt="Jeopardy image" />
+              <figcaption class="gallery__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus
+                quos magnam aperiam placeat voluptatum excepturi omnis. Hic repudiandae ipsam repellat doloremque fugiat
+                officia iusto deleniti amet, assumenda debitis perferendis? Placeat?</figcaption>
+            </figure>
+          </div>
         </div>
+        <!-- projects image box END -->
       </div>
-      <!-- projects image box END -->
-
     </section>
     <!-- projects END -->
 
     <!-- about -->
     <section class="about grid-item bg-primary-light" id="about">
-      <h2 class="about__header center-text header-font">About Me</h2>
-      <div class="about__section">
-        <img src="img/about-me-img.jpg" alt="about-me-img" class="about__section-img">
-        <div class="about__section-description">Hi, I'm Eduardo,<br><br>So,
-          I've picked up some pretty cool skills lately. I've gotten the hang of HTML, JavaScript, CSS, and even ReactJS
-          for the frontend stuff. On the backend side, I've been messing around with Node.js, Express, and Django, and
-          I've also been diving into databases like PostgreSQL and MongoDB. It's been quite the journey, but now that
-          I've got all
-          this under my belt, I'm really excited to team up with others and put this knowledge to good use!</div>
+      <div class="container">
+        <h2 class="about__header center-text header-font">About Me</h2>
+        <div class="about__section">
+          <img src="img/about-me-img.jpg" alt="about-me-img" class="about__section-img">
+          <div class="about__section-description">Hi, I'm Eduardo,<br><br>So,
+            I've picked up some pretty cool skills lately. I've gotten the hang of HTML, JavaScript, CSS, and even
+            ReactJS
+            for the frontend stuff. On the backend side, I've been messing around with Node.js, Express, and Django, and
+            I've also been diving into databases like PostgreSQL and MongoDB. It's been quite the journey, but now that
+            I've got all
+            this under my belt, I'm really excited to team up with others and put this knowledge to good use!</div>
+        </div>
+
       </div>
     </section>
     <!-- about END -->
@@ -101,47 +112,51 @@
 
   <!-- footer -->
   <footer class="footer">
-    <nav class="footer__nav">
-      <h3 class="footer__header">Feel free to contact me!</h3>
-      <ul class="footer__nav-links">
-        <li class="footer__nav-links--item github">
-          <a class="social" target="_blank" href="https://github.com/eddieaviles357" aria-label="github" rel="noopener">
-            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-              <path
-                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-            </svg>
-          </a>
-        </li>
-        <li class="footer__nav-links--item linkedin">
-          <a class="social" target="_blank" href="https://www.linkedin.com/in/eduardo-aviles-b0066a251/"
-            aria-label="linkedin" rel="noopener">
-            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path
-                d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
-            </svg>
-          </a>
-        </li>
-        <li class="footer__nav-links--item x">
-          <a class="social" target="_blank" href="https://twitter.com/EDUARDO_THE_DEV" aria-label="X" rel="noopener">
-            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path
-                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-            </svg>
-          </a>
-        </li>
-        <li class="footer__nav-links--item email">
-          <a class="social" target="_blank" href="mailto:eduardoaviles357@gmail.com"
-            aria-label="eduardoaviles357@gmail.com" rel="noopener">
-            <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path
-                d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-            </svg>
-          </a>
+    <div class="container">
 
-        </li>
-      </ul>
-      <div class="copyright">&copy; Copyright 2024 by Eduardo Aviles</div>
-    </nav>
+      <nav class="footer__nav">
+        <h3 class="footer__header">Feel free to contact me!</h3>
+        <ul class="footer__nav-links">
+          <li class="footer__nav-links--item github">
+            <a class="social" target="_blank" href="https://github.com/eddieaviles357" aria-label="github"
+              rel="noopener">
+              <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__nav-links--item linkedin">
+            <a class="social" target="_blank" href="https://www.linkedin.com/in/eduardo-aviles-b0066a251/"
+              aria-label="linkedin" rel="noopener">
+              <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__nav-links--item x">
+            <a class="social" target="_blank" href="https://twitter.com/EDUARDO_THE_DEV" aria-label="X" rel="noopener">
+              <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__nav-links--item email">
+            <a class="social" target="_blank" href="mailto:eduardoaviles357@gmail.com"
+              aria-label="eduardoaviles357@gmail.com" rel="noopener">
+              <svg class="social-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+              </svg>
+            </a>
+
+          </li>
+        </ul>
+        <div class="copyright">&copy; Copyright 2024 by Eduardo Aviles</div>
+      </nav>
+    </div>
   </footer>
 
   <script src="js/index.js"></script>
