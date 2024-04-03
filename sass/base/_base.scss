@@ -16,15 +16,18 @@ html {
   @include respond(tab-port) {
     font-size: 50%;
   }
+
   // width < 1200px
   // 1 rem = 9px; 9px/16px = 56.25%
   @include respond(tab-land) {
     font-size: 56.25%;
   }
+
   // 1 rem = 12px; 12px/16px = 75%
   @include respond(tab-land) {
     font-size: 75%;
   }
+
   scroll-behavior: smooth;
 }
 
@@ -46,6 +49,8 @@ a {
   text-decoration: none;
 }
 
-a:visited, a:hover, a:active {
+a:visited,
+a:hover,
+a:active {
   color: inherit;
 }
