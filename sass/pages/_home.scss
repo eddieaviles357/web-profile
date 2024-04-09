@@ -2,10 +2,9 @@
   padding: 5rem 3rem;
 
   &__header {
-    font-size: 7.5rem;
-    color: $color-primary-light;
-    padding-bottom: 5rem;
-    text-shadow: .2rem .2rem black;
+    @include header(35rem);
+    @include pseudo-style(before, top, 0, left, 0);
+    @include pseudo-style(after, top, 0, right, -6%);
   }
 
 }
@@ -14,10 +13,9 @@
   padding: 5rem 3rem;
 
   &__header {
-    font-size: 7.5rem;
-    color: $color-black;
-    padding-bottom: 5rem;
-    text-shadow: .2rem .2rem $color-white;
+    @include header(40rem);
+    @include pseudo-style(before, top, 0, left, 0);
+    @include pseudo-style(after, top, 0, right, -6%);
   }
 
   &__section {
@@ -46,10 +44,10 @@
         height: 100%;
         border-radius: 1rem;
         transform: rotate(3deg);
-        background: $color-tertiary-light; 
+        background: $color-tertiary-light;
         z-index: -1;
       }
-  
+
       &::before {
         z-index: -1;
         content: '';
