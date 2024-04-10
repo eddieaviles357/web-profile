@@ -1,11 +1,23 @@
-@keyframes line-height-animation { 
+@keyframes fade-in-from-right {
   0% {
     opacity: 0;
-    line-height: 0rem;
+    transform: translate(50%);
   }
 
   100% {
     opacity: 1;
-    line-height: 4rem;
+    transform: translate(0);
+  }
+}
+
+@keyframes fade-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translate(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }
