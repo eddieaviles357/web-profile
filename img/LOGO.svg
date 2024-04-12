@@ -1,5 +1,5 @@
-<svg width="256" height="278" viewBox="0 0 256 278" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Frame 1">
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="LOGO" clip-path="url(#clip0_4_2)">
 <g id="A-DB">
 <g id="bottom-db-disc">
 <path id="bottom" d="M254.5 183.5C254.5 186.509 252.265 189.734 247.324 192.947C242.447 196.118 235.29 199.03 226.313 201.499C208.379 206.431 183.519 209.5 156 209.5C128.481 209.5 103.621 206.431 85.6871 201.499C76.7096 199.03 69.5532 196.118 64.6761 192.947C59.7347 189.734 57.5 186.509 57.5 183.5C57.5 180.491 59.7347 177.266 64.6761 174.053C69.5532 170.882 76.7096 167.97 85.6871 165.501C103.621 160.569 128.481 157.5 156 157.5C183.519 157.5 208.379 160.569 226.313 165.501C235.29 167.97 242.447 170.882 247.324 174.053C252.265 177.266 254.5 180.491 254.5 183.5Z" fill="black" stroke="white" stroke-width="3"/>
@@ -40,4 +40,9 @@
 <rect id="top-menu" x="73.5" y="1.5" width="165" height="30" rx="15" fill="white" stroke="black" stroke-width="3"/>
 </g>
 </g>
+<defs>
+<clipPath id="clip0_4_2">
+<rect width="256" height="256" fill="white"/>
+</clipPath>
+</defs>
 </svg>
