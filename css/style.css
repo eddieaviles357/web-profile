@@ -444,7 +444,7 @@ body {
   margin-bottom: 5rem;
 }
 .header__text-box {
-  margin-top: 5rem;
+  margin-top: 10rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -495,7 +495,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 5rem;
-  height: 5rem;
+  height: 10rem;
 }
 
 .nav-menu {
@@ -503,8 +503,12 @@ body {
   flex-direction: row;
   justify-content: space-around;
   width: 25%;
-  font-size: 2rem;
+  min-width: 40rem;
+  font-size: 3rem;
   list-style: none;
+}
+.nav-menu__items {
+  margin: 0 2rem;
 }
 .nav-menu__items:hover {
   transition: all 0.2s;
@@ -515,6 +519,11 @@ body {
 .logo {
   color: black !important;
   font-size: 2rem;
+  line-height: 0;
+}
+.logo svg {
+  height: 7rem;
+  width: 7rem;
 }
 
 .projects {
