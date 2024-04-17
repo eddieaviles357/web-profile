@@ -113,12 +113,6 @@ body {
   letter-spacing: 1rem;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 132rem;
-  height: 100%;
-}
-
 .center-text {
   text-align: center;
 }
@@ -441,10 +435,8 @@ body {
   height: 80vh;
   min-height: 50rem;
   width: 100%;
-  margin-bottom: 5rem;
 }
 .header__text-box {
-  margin-top: 10rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -458,6 +450,7 @@ body {
   min-height: 50rem;
   display: flex;
   margin: 0 3rem;
+  padding-top: 9.5rem;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -485,7 +478,10 @@ body {
 }
 
 .navigation {
-  background-color: #726fd5;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 100%;
+  z-index: 99;
 }
 .navigation__container {
   max-width: 132rem;
@@ -515,6 +511,9 @@ body {
   transform: scale(1.2) rotate(5deg);
   box-shadow: 0.5rem 0.5rem 0.5rem 0.1rem black;
 }
+.nav-menu__items > a {
+  color: #f1dda6;
+}
 
 .logo {
   color: black !important;
@@ -532,6 +531,12 @@ body {
   max-height: 75rem;
   height: 90vh;
   min-height: 75rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 132rem;
+  height: 100%;
 }
 
 .projects {
