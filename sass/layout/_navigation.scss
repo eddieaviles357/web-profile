@@ -33,27 +33,32 @@
   list-style: none;
 
   &__items {
+    padding: 0 1rem;
     margin: 0 2rem;
+
+    border: .3rem solid $color-black;
+    box-shadow: 1rem 1rem 0 $color-black;
+
+    background-color: $color-secondary-dark;
 
     &:hover {
       transition: all 0.2s;
       transform: scale(1.2) rotate(5deg);
-      box-shadow: .5rem .5rem .5rem .1rem black;
+      box-shadow: .5rem .5rem .5rem .1rem $color-black;
     }
 
     &>a {
-      color: $color-secondary-light;
+      color: $color-black;
     }
   }
 }
 
 .logo {
-  color: black !important;
-  font-size: 2rem;
+  color: $color-black !important;
   line-height: 0;
 
   & svg {
-    height: 7rem;
-    width: 7rem;
+    height: 10rem;
+    width: 10rem;
   }
 }
