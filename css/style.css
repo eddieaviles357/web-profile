@@ -504,25 +504,28 @@ body {
   list-style: none;
 }
 .nav-menu__items {
+  padding: 0 1rem;
   margin: 0 2rem;
+  border: 0.3rem solid #000;
+  box-shadow: 1rem 1rem 0 #000;
+  background-color: #f1d032;
 }
 .nav-menu__items:hover {
   transition: all 0.2s;
   transform: scale(1.2) rotate(5deg);
-  box-shadow: 0.5rem 0.5rem 0.5rem 0.1rem black;
+  box-shadow: 0.5rem 0.5rem 0.5rem 0.1rem #000;
 }
 .nav-menu__items > a {
-  color: #f1dda6;
+  color: #000;
 }
 
 .logo {
-  color: black !important;
-  font-size: 2rem;
+  color: #000 !important;
   line-height: 0;
 }
 .logo svg {
-  height: 7rem;
-  width: 7rem;
+  height: 10rem;
+  width: 10rem;
 }
 
 .projects {
