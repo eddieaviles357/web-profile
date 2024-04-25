@@ -9,9 +9,9 @@
   padding: 5rem 3rem;
 
   &__header {
-    @include header(35rem);
-    @include pseudo-style(before, top, 0, left, 0);
-    @include pseudo-style(after, top, 0, right, -6%);
+    @include header(35rem, $color-black, $color-secondary-dark);
+    @include pseudo-style(before, top, 0, left, 0, $color-secondary-dark, $color-black);
+    @include pseudo-style(after, top, 0, right, -6%, $color-secondary-dark, $color-black);
   }
 
 }
@@ -20,39 +20,39 @@
   padding: 5rem 3rem;
 
   &__header {
-    @include header(40rem);
-    @include pseudo-style(before, top, 0, left, 0);
-    @include pseudo-style(after, top, 0, right, -6%);
+    @include header(40rem, $color-tertiary-light, $color-secondary-light);
+    @include pseudo-style(before, top, 0, left, 0, $color-secondary-light, $color-tertiary-light);
+    @include pseudo-style(after, top, 0, right, -6%, $color-secondary-light, $color-tertiary-light);
   }
 
   &__section {
     &-img {
       transform: scaleX(-1);
-      filter: sepia(.5);
       padding: 1rem;
-      border: 1rem solid $color-secondary-light;
-      border-radius: 50%;
+      border: 1rem solid $color-tertiary-light;
+      
     }
 
     &-description {
       font-size: 1.8rem;
       padding: 3rem;
 
-      border-radius: 1rem;
-
+      // border-radius: 1rem;
+      color: $color-tertiary-light;
+      border: .3rem solid $color-tertiary-light;
       background-color: $color-secondary-light;
 
       &::after {
+        z-index: -1;
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 2.3rem;
+        left: 2.3rem;
+        // border-radius: 1rem;
         width: 100%;
-        height: 100%;
-        border-radius: 1rem;
+        height: 92%;
         transform: rotate(3deg);
-        background: $color-tertiary-light;
-        z-index: -1;
+        background: $color-tertiary-light; 
       }
 
       &::before {

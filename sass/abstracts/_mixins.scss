@@ -23,29 +23,29 @@
   border-radius: 3rem;
 }
 
-@mixin header($width) {
+@mixin header($width, $clr, $bg-clr) {
   width: $width;
   position: relative;
   margin: 0 auto 10rem;
 
-  border: .3rem solid black;
-  background-color: $color-secondary-dark;
-  box-shadow: 1rem 1rem black;
+  border: .3rem solid $clr;
+  background-color: $bg-clr;
+  box-shadow: 1rem 1rem $clr;
 
   font-size: 7.5rem;
-  color: $color-black;
+  color: $clr;
 }
 
-@mixin pseudo-style($el, $top-or-bottom, $tb-val, $left-or-right, $lr-val) {
+@mixin pseudo-style($el, $top-or-bottom, $tb-val, $left-or-right, $lr-val, $bg-clr, $brd-clr) {
   &:#{$el} {
     @extend %pseudos !optional;
     #{$top-or-bottom}: $tb-val;
     #{$left-or-right}: $lr-val;
     width: 2rem;
     height: 2rem;
-    border: .3rem solid black;
+    border: .3rem solid $brd-clr;
     border-radius: 50%;
-    background: $color-white;
+    background: $bg-clr;
     transform: translate(-50%, -50%);
     @content;
   }
