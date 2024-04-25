@@ -57,8 +57,14 @@
   color: $color-black !important;
   line-height: 0;
 
+  background-color: $color-secondary-light;
+  border-radius: 50%;
+  padding: 1rem;
+  border: .3rem solid $color-primary-light;
+
+  box-shadow: 1rem 1rem 0 $color-black;
   & svg {
-    height: 10rem;
-    width: 10rem;
+    height: 5rem;
+    width: 5rem;
   }
 }
