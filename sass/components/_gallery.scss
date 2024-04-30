@@ -1,4 +1,3 @@
-
 .gallery {
   display: block;
   position: relative;
@@ -14,7 +13,7 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    
+
     justify-content: space-around;
     transition: all .5s ease-in-out;
 
@@ -26,7 +25,7 @@
       box-shadow: 0 0 3rem -1rem $color-black;
       transition: all .5s ease-in-out;
     }
-    
+
   }
 
   &__description {
@@ -53,7 +52,7 @@
       width: 100%;
       height: 92%;
       transform: rotate(3deg);
-      background: $color-black; 
+      background: $color-black;
     }
 
     &::before {
@@ -75,23 +74,25 @@
     transform: scale(.8);
     z-index: 1;
 
-    & > img {
+    &>img {
       transform: rotate(-10deg);
     }
+
     // & > :nth-child(2) {
     //   opacity: 0;
     // }
   }
-  
+
   &--bottom {
     top: 13rem;
     left: 3rem;
     transform: scale(.8);
     z-index: 0;
-    
-    & > img {
+
+    &>img {
       transform: rotate(10deg);
     }
+
     // & > :nth-child(2) {
     //   opacity: 0;
     // }
@@ -108,7 +109,7 @@
   // we dont need any events on the active element
   pointer-events: none;
 
-  & > img {
+  &>img {
     transform: rotate(0);
   }
 }
