@@ -657,6 +657,7 @@ body {
   height: inherit;
   width: inherit;
   filter: sepia(0.4);
+  border: 0.3rem solid #f35c5c;
 }
 .about__img-container::after {
   z-index: -1;
