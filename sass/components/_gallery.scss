@@ -1,14 +1,17 @@
 .gallery {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
 
   z-index: 0;
   // experimental
-  perspective: 10rem;
+  // perspective: 10rem;
 
   &__item {
-    position: absolute;
+    // position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -100,16 +103,13 @@
 }
 
 // must go after .gallery-item to override opacity
-.active {
-  top: 0;
-  left: 1rem;
-  opacity: 1;
-  z-index: 2;
+// .active {
+//   top: 0;
+//   left: 1rem;
+//   opacity: 1;
+//   z-index: 2;
 
-  // we dont need any events on the active element
-  pointer-events: none;
-
-  &>img {
-    transform: rotate(0);
-  }
-}
+//   &>img {
+//     transform: rotate(0);
+//   }
+// }
