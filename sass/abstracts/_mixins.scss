@@ -26,7 +26,7 @@
 @mixin header($width, $clr, $bg-clr) {
   width: $width;
   position: relative;
-  margin: 0 auto 10rem;
+  margin: 10rem auto;
 
   border: .3rem solid $clr;
   background-color: $bg-clr;
