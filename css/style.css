@@ -230,11 +230,16 @@ body {
 .gallery__item {
   margin: 2rem 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
   width: 100%;
   justify-content: space-around;
   transition: all 0.5s ease-in-out;
+}
+.gallery__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.gallery__item:nth-child(odd) {
+  flex-direction: row;
 }
 .gallery__item-img-wrapper {
   position: relative;
