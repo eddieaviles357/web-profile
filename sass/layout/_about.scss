@@ -2,11 +2,12 @@
     width: 100%;
     position: relative;
     max-height: 85rem;
-    height: 90vh;
+    height: 60vh;
     min-height: 85rem;
     z-index: 0;
 
     &__section {
+        position: relative;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-around;
