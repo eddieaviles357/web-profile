@@ -83,3 +83,19 @@
 .capitalize {
   text-transform: uppercase;
 }
+
+// IN-VIEW-SCROLL
+.scroll-left-fade {
+  transform: translateX(10rem);
+  @include scroll-fade;
+}
+
+.scroll-right-fade {
+  transform: translateX(-10rem);
+  @include scroll-fade;
+}
+
+.scroll-in-view {
+  transform: none;
+  opacity: 1;
+}
