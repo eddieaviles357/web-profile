@@ -95,6 +95,11 @@
   @include scroll-fade;
 }
 
+.scroll-top-fade {
+  transform: translateY(10rem);
+  @include scroll-fade;
+}
+
 .scroll-in-view {
   transform: none;
   opacity: 1;
