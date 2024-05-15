@@ -54,7 +54,7 @@
 @mixin scroll-fade {
   opacity: 0;
   transition-property: transform, opacity;
-  transition-duration: 1s;
+  transition-duration: .5s;
   transition-timing-function: linear;
 }
 
