@@ -47,9 +47,16 @@
       padding: 1rem;
       min-height: 18rem;
       align-self: end;
-      // line-height: 0rem;
       transition: all 1s ease-in-out;
       animation: fade-in-from-right 1s ease-in-out 1 both;
+
+      @include respond(tab-port) {
+        width: 90%;
+      }
+
+      @include respond(tab-land) {
+        align-self: center;
+      }
     }
   }
 

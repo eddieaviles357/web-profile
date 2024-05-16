@@ -5,10 +5,18 @@
 
 .left-text {
   text-align: left;
+
+  @include respond(tab-land) {
+    text-align: center;
+  }
 }
 
 .right-text {
   text-align: right;
+
+  @include respond(tab-land) {
+    text-align: center;
+  }
 }
 
 
@@ -88,11 +96,19 @@
 .scroll-left-fade {
   transform: translateX(10rem);
   @include scroll-fade;
+
+  @include respond(tab-port) {
+    transform: none;
+  }
 }
 
 .scroll-right-fade {
   transform: translateX(-10rem);
   @include scroll-fade;
+
+  @include respond(tab-port) {
+    transform: none;
+  }
 }
 
 .scroll-top-fade {

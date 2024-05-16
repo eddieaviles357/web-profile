@@ -8,4 +8,8 @@
   max-height: 82rem;
   height: auto;
   margin: 0 0 6rem;
+
+  @include respond(tab-port) {
+    max-height: none;
+  }
 }
