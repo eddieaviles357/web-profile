@@ -351,7 +351,7 @@ body {
   width: 50%;
   height: 22rem;
   background-color: #f1d032;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #726fd5;
 }
 @media only screen and (max-width: 56.25em) {
@@ -405,6 +405,12 @@ body {
   height: 60vh;
   min-height: 85rem;
   z-index: 0;
+  height: auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .about {
+    max-height: none;
+  }
 }
 .about__section {
   position: relative;
@@ -412,6 +418,11 @@ body {
   flex-direction: row-reverse;
   justify-content: space-around;
   align-items: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .about__section {
+    flex-direction: column;
+  }
 }
 .about__section-img {
   width: 30rem;
@@ -424,6 +435,11 @@ body {
   min-height: 30rem;
   height: auto;
   width: 50%;
+}
+@media only screen and (max-width: 56.25em) {
+  .about__section-description {
+    width: 100%;
+  }
 }
 
 .footer {
@@ -661,7 +677,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 132rem;
-  height: inherit;
+  height: 100%;
   position: relative;
 }
 
@@ -672,18 +688,18 @@ body {
   width: 35rem;
   position: relative;
   margin: 10rem auto;
-  border: 0.3rem solid #726fd5;
+  border: 0.3rem solid #000;
   background-color: #f1d032;
-  box-shadow: 1rem 1rem #726fd5;
+  box-shadow: 1rem 1rem #000;
   font-size: 7.5rem;
-  color: #726fd5;
+  color: #000;
 }
 .projects__header:before {
   top: 0;
   left: 0;
   width: 2rem;
   height: 2rem;
-  border: 0.3rem solid #726fd5;
+  border: 0.3rem solid #000;
   border-radius: 50%;
   background: #f1d032;
   transform: translate(-50%, -50%);
@@ -693,7 +709,7 @@ body {
   right: -6%;
   width: 2rem;
   height: 2rem;
-  border: 0.3rem solid #726fd5;
+  border: 0.3rem solid #000;
   border-radius: 50%;
   background: #f1d032;
   transform: translate(-50%, -50%);
@@ -739,6 +755,22 @@ body {
   border: 0.3rem solid #f35c5c;
   background-color: #f1dda6;
 }
+@media only screen and (max-width: 56.25em) {
+  .about__section-description {
+    border: none;
+  }
+}
+.about__section-description::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0 3rem -1rem #000;
+  width: 100%;
+  height: 100%;
+}
 .about__section-description::after {
   z-index: -1;
   content: "";
@@ -750,16 +782,10 @@ body {
   transform: rotate(3deg);
   background: #f35c5c;
 }
-.about__section-description::before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 1rem;
-  box-shadow: 0 0 3rem -1rem #f35c5c;
-  width: 100%;
-  height: 100%;
+@media only screen and (max-width: 56.25em) {
+  .about__section-description::after {
+    background: none;
+  }
 }
 .about__img-container {
   position: relative;
