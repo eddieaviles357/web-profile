@@ -2,7 +2,7 @@
 .container {
   margin: 0 auto;
   max-width: 132rem;
-  height: inherit;
+  height: 100%;
   position: relative;
 }
 
@@ -10,9 +10,9 @@
   padding: 5rem 3rem;
 
   &__header {
-    @include header(35rem, $color-primary-light, $color-secondary-dark);
-    @include pseudo-style(before, top, 0, left, 0, $color-secondary-dark, $color-primary-light);
-    @include pseudo-style(after, top, 0, right, -6%, $color-secondary-dark, $color-primary-light);
+    @include header(35rem, $color-black, $color-secondary-dark);
+    @include pseudo-style(before, top, 0, left, 0, $color-secondary-dark, $color-black);
+    @include pseudo-style(after, top, 0, right, -6%, $color-secondary-dark, $color-black);
   }
 
 }
@@ -37,6 +37,22 @@
       border: .3rem solid $color-tertiary-light;
       background-color: $color-secondary-light;
 
+      @include respond(tab-port) {
+        border: none;
+      }
+
+      &::before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 1rem;
+        box-shadow: 0 0 3rem -1rem $color-black;
+        width: 100%;
+        height: 100%;
+      }
+
       &::after {
         z-index: -1;
         content: '';
@@ -48,18 +64,10 @@
         height: 92%;
         transform: rotate(3deg);
         background: $color-tertiary-light;
-      }
 
-      &::before {
-        z-index: -1;
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 1rem;
-        box-shadow: 0 0 3rem -1rem $color-tertiary-light;
-        width: 100%;
-        height: 100%;
+        @include respond(tab-port) {
+          background: none;
+        }
       }
     }
   }
