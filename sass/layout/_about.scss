@@ -5,6 +5,11 @@
     height: 60vh;
     min-height: 85rem;
     z-index: 0;
+    height: auto;
+
+    @include respond(tab-port) {
+    max-height: none;
+    }
 
     &__section {
         position: relative;
@@ -12,6 +17,10 @@
         flex-direction: row-reverse;
         justify-content: space-around;
         align-items: center;
+
+        @include respond(tab-port) {
+        flex-direction: column;
+        }
 
         &-img {
             width: 30rem;
@@ -26,6 +35,10 @@
             min-height: 30rem;
             height: auto;
             width: 50%;
+
+            @include respond(tab-port) {
+            width: 100%;
+            }
         }
 
     }
