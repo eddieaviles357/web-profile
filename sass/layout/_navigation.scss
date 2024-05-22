@@ -4,7 +4,16 @@
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
   width: 100%;
+  overflow: hidden;
   z-index: 99;
+
+  @include respond(tab-port) {
+    // margin: 0 3rem;
+  }
+
+  @include respond(phone) {
+    // margin: 0 3rem;
+  }
 
   &__container {
     max-width: 132rem;
@@ -19,7 +28,7 @@
     height: 10rem;
 
     @include respond(tab-port) {
-      padding: 0;
+      padding: 0 3rem;
     }
   }
 }
