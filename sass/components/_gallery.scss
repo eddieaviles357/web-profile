@@ -43,6 +43,10 @@
       border: .3rem solid $color-primary-light;
       background-color: $color-primary-dark;
 
+      @include respond(tab-port) {
+        border: none;
+      }
+
       &::after {
         z-index: -1;
         content: '';
@@ -81,6 +85,10 @@
       @include respond(tab-port) {
         width: 50rem;
       }
+
+      @include respond(phone) {
+        width: 100%;
+      }
     }
 
   }
@@ -101,6 +109,12 @@
     @include respond(tab-port) {
       width: 50rem;
       padding: 0 1rem;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      padding: 0 3rem;
+      border: none;
     }
 
     &::before {
@@ -131,46 +145,4 @@
       }
     }
   }
-
-  // &--top {
-  //   top: -13rem;
-  //   left: 3rem;
-  //   transform: scale(.8);
-  //   z-index: 1;
-
-  // &>img {
-  //   transform: rotate(-10deg);
-  // }
-
-  // & > :nth-child(2) {
-  //   opacity: 0;
-  // }
-  // }
-
-  // &--bottom {
-  //   top: 13rem;
-  //   left: 3rem;
-  //   transform: scale(.8);
-  //   z-index: 0;
-
-  // &>img {
-  //   transform: rotate(10deg);
-  // }
-
-  // & > :nth-child(2) {
-  //   opacity: 0;
-  // }
-  // }
 }
-
-// must go after .gallery-item to override opacity
-// .active {
-//   top: 0;
-//   left: 1rem;
-//   opacity: 1;
-//   z-index: 2;
-
-//   &>img {
-//     transform: rotate(0);
-//   }
-// }
