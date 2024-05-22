@@ -304,6 +304,11 @@ body {
   border: 0.3rem solid #726fd5;
   background-color: #2f28b4;
 }
+@media only screen and (max-width: 56.25em) {
+  .gallery__item-img-wrapper {
+    border: none;
+  }
+}
 .gallery__item-img-wrapper::after {
   z-index: -1;
   content: "";
@@ -341,6 +346,11 @@ body {
     width: 50rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .gallery__item--img {
+    width: 100%;
+  }
+}
 .gallery__description {
   position: relative;
   display: flex;
@@ -358,6 +368,13 @@ body {
   .gallery__description {
     width: 50rem;
     padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .gallery__description {
+    width: 100%;
+    padding: 0 3rem;
+    border: none;
   }
 }
 .gallery__description::before {
@@ -437,6 +454,11 @@ body {
   width: 50%;
 }
 @media only screen and (max-width: 56.25em) {
+  .about__section-description {
+    width: 50rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
   .about__section-description {
     width: 100%;
   }
@@ -601,6 +623,7 @@ body {
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
   width: 100%;
+  overflow: hidden;
   z-index: 99;
 }
 .navigation__container {
@@ -615,7 +638,7 @@ body {
 }
 @media only screen and (max-width: 56.25em) {
   .navigation__container {
-    padding: 0;
+    padding: 0 3rem;
   }
 }
 
@@ -684,6 +707,11 @@ body {
 .projects {
   padding: 5rem 3rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .projects {
+    padding: 5rem 0;
+  }
+}
 .projects__header {
   width: 35rem;
   position: relative;
@@ -717,6 +745,11 @@ body {
 
 .about {
   padding: 5rem 3rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .about {
+    padding: 5rem 0;
+  }
 }
 .about__header {
   width: 40rem;
@@ -791,6 +824,16 @@ body {
   position: relative;
   width: 30rem;
   height: 30rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .about__img-container {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about__img-container {
+    margin-bottom: 3rem;
+  }
 }
 .about__img-container > .about-img {
   transform: scaleX(-1);
