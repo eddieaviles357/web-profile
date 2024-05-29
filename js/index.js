@@ -1,5 +1,7 @@
 // // window.addEventListener('load', () => {
 window.addEventListener('DOMContentLoaded', (evt) => {
+
+    // SCROLL FUNCTIONALITY
     const options = {
         root: null,
         threshold: 0,
@@ -24,7 +26,29 @@ window.addEventListener('DOMContentLoaded', (evt) => {
 
     for (let footerSection of footerSections) {
         observer.observe(footerSection);
-    }
+    } // END SCROLL FUNCTIONALITY
 
+
+
+
+
+
+
+    
 });
+// NAV MENU FUNCTIONALITY
+const navMenu = document.querySelector('.nav-menu');
+const navChilds = Array.from(navMenu.children)
+
+let windowWidth;
+
+let menuClick = e => {
+    navMenu.classList.add('active-phone-nav');
+    for (let child of navChilds) {
+        child.classList.add('.active-phone-children');
+    }
+    console.log('hit');
+}
+navMenu.addEventListener('click', menuClick );
+
 // // })
