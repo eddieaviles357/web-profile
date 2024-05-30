@@ -39,14 +39,25 @@ window.addEventListener('DOMContentLoaded', (evt) => {
 // NAV MENU FUNCTIONALITY
 const navMenu = document.querySelector('.nav-menu');
 const navChilds = Array.from(navMenu.children)
-
+let isNavClicked = false;
 let windowWidth;
 
 let menuClick = e => {
-    navMenu.classList.add('active-phone-nav');
-    for (let child of navChilds) {
-        child.classList.add('.active-phone-children');
+    if (isNavClicked) {
+        navMenu.classList.add('active-phone-nav');
+        for (let child of navChilds) {
+            child.classList.add('.active-phone__children');
+        }
     }
+
+    if (!isNavClicked) {
+        navMenu.classList.remove('active-phone-nav');
+        for (let child of navChilds) {
+            child.classList.remove('.active-phone__children');
+        }
+    }
+    console.log(isNavClicked)
+    isNavClicked = !isNavClicked;
     console.log('hit');
 }
 navMenu.addEventListener('click', menuClick );
