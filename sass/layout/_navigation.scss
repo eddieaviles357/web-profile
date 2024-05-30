@@ -78,6 +78,11 @@
       transition: all 0.2s;
       transform: scale(1.2) rotate(5deg);
       box-shadow: .5rem .5rem .5rem .1rem $color-black;
+
+      @include respond(phone) {
+        transform: none;
+        box-shadow: .1rem .1rem .1rem .1rem $color-black;
+      }
     }
 
     &>a {
