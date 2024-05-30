@@ -230,12 +230,19 @@ body {
 }
 
 .active-phone-nav {
-  width: 100%;
-  height: 22rem;
+  width: 100% !important;
+  min-width: 100% !important;
+  height: 22rem !important;
+  margin: 0 !important;
 }
 
-.active-phone-children {
-  height: auto;
+.active-phone__children {
+  width: 100% !important;
+  min-height: 6rem !important;
+  height: 6rem !important;
+  overflow: hidden !important;
+  box-shadow: 0.3rem 0.3rem 0 #000 !important;
+  background-color: #f1d032 !important;
 }
 
 .btn {
@@ -698,6 +705,12 @@ body {
   transition: all 0.2s;
   transform: scale(1.2) rotate(5deg);
   box-shadow: 0.5rem 0.5rem 0.5rem 0.1rem #000;
+}
+@media only screen and (max-width: 37.5em) {
+  .nav-menu__items:hover {
+    transform: none;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #000;
+  }
 }
 .nav-menu__items > a {
   color: #000;
