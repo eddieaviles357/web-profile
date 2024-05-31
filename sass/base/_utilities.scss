@@ -124,6 +124,7 @@
 // NAVIGATION CONTROL
 
 .active-phone-nav {
+  transition: all .3s;
   width: 100%!important;
   min-width: 100%!important;
   height: 22rem!important;
@@ -131,7 +132,6 @@
 }
 
 .active-phone__children {
-  // height: auto!important;
   width: 100%!important;
   min-height: 6rem!important;
   height: 6rem!important;
