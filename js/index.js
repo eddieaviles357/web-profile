@@ -38,28 +38,16 @@ window.addEventListener('DOMContentLoaded', (evt) => {
 });
 // NAV MENU FUNCTIONALITY
 const navMenu = document.querySelector('.nav-menu');
-const navChilds = Array.from(navMenu.children)
+// CONVERt TO ARRAY SO WE CAN MAP CHILD ELEMENTS
+const navChilds = Array.from(navMenu.children); 
 let isNavClicked = false;
-let windowWidth;
+let windowWidth; // IF WIDTH IS NOT PHONE WIDTH IGNORE MENU CLICKS
 
 let menuClick = e => {
-    if (isNavClicked) {
-        navMenu.classList.add('active-phone-nav');
-        for (let child of navChilds) {
-            child.classList.add('.active-phone__children');
-        }
-    }
-
-    if (!isNavClicked) {
-        navMenu.classList.remove('active-phone-nav');
-        for (let child of navChilds) {
-            child.classList.remove('.active-phone__children');
-        }
-    }
-    console.log(isNavClicked)
-    isNavClicked = !isNavClicked;
-    console.log('hit');
+    navMenu.classList.toggle('active-phone-nav');
+    navChilds.map( child => child.classList.toggle( 'active-phone__children') );
 }
+
 navMenu.addEventListener('click', menuClick );
 
 // // })
