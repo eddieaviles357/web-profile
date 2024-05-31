@@ -37,6 +37,7 @@
   font-size: 3rem;
 
   list-style: none;
+  transition: all .1s;
 
   @include respond(phone) {
     position: absolute;
@@ -80,8 +81,9 @@
       box-shadow: .5rem .5rem .5rem .1rem $color-black;
 
       @include respond(phone) {
+        transition: none;
         transform: none;
-        box-shadow: .1rem .1rem .1rem .1rem $color-black;
+        box-shadow: .3rem .3rem 0 $color-black;
       }
     }
 
