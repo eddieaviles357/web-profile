@@ -230,6 +230,7 @@ body {
 }
 
 .active-phone-nav {
+  transition: all 0.3s;
   width: 100% !important;
   min-width: 100% !important;
   height: 22rem !important;
@@ -670,6 +671,7 @@ body {
   min-width: 40rem;
   font-size: 3rem;
   list-style: none;
+  transition: all 0.1s;
 }
 @media only screen and (max-width: 37.5em) {
   .nav-menu {
@@ -708,8 +710,9 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .nav-menu__items:hover {
+    transition: none;
     transform: none;
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #000;
+    box-shadow: 0.3rem 0.3rem 0 #000;
   }
 }
 .nav-menu__items > a {
