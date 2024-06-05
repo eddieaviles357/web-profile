@@ -49,28 +49,39 @@ window.addEventListener('DOMContentLoaded', (evt) => {
 
     // CONVERT TO ARRAY SO WE CAN MAP CHILD ELEMENTS
     const navChilds = Array.from(navMenu.children); 
-    let isNavClicked = false;
+    let isNavOpen = false;
 
 
     let menuClick = e => {
         if (!isPhoneSize) return; 
-        isNavClicked = !isNavClicked;
+        if (isNavOpen === false) {
+            isNavOpen = true;
+            navMenuToggleStyles();
+            return;
+        }
         const target = e.target;
 
-        // console.dir(target);
-        console.log(`%cisNavClicked: ${isNavClicked}`, 'color: yellow; font-size: 1.4rem');
         switch (target.tagName) {
             case 'UL': 
-                console.log(`%ctarget tagname === ${target.tagName}`, 'color: green; font-size: 1.4rem ');
+                isNavOpen = false;
+                defaultHamburgerMenu();
                 break;
             case 'LI':
-                console.log(`%ctarget tagName === ${target.tagName}`, 'color: blue; font-size: 1.4rem')
+                console.log('LI HIT IS NAV OPEN', isNavOpen)
+                isNavOpen = false;
+                target.firstChild.click();
+                defaultHamburgerMenu();
+                break;
+            case 'A':
+                console.log('A HIT IS NAV OPEN', isNavOpen)
+                isNavOpen = false;
+                target.click();
+                defaultHamburgerMenu();
+                break;
             default:
                 console.log('default');
-        }
-        
-
-        navMenuToggleStyles();
+            }
+                
     }
 
     navMenu.addEventListener('click', menuClick );
@@ -85,7 +96,8 @@ window.addEventListener('DOMContentLoaded', (evt) => {
         navChilds.map( child => child.classList.toggle( 'active-phone__children') );
     }
     // default nav
-    function removeNavStyles() {
+    function defaultHamburgerMenu() {
+        isNavOpen = false;
         navMenu.classList.remove('active-phone-nav');
         navChilds.map( child => child.classList.remove( 'active-phone__children') );
     }
@@ -97,7 +109,7 @@ window.addEventListener('DOMContentLoaded', (evt) => {
         
         // IF USER DECIDES TO CHANGE PHONE WIDTH TO LANDSCAPE OR WINDOW RESIZED BIGGER
         if(!isPhoneSize || isPhoneSize === 'undefined') {
-            removeNavStyles()
+            defaultHamburgerMenu()
         }
     }
 
