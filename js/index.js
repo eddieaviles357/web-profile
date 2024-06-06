@@ -1,7 +1,12 @@
 window.addEventListener('DOMContentLoaded', (evt) => {
     let windowWidth = window.innerWidth;
     let isPhoneSize;
+    let isNavOpen = false;
+    // NAV MENU FUNCTIONALITY
+    const navMenu = document.querySelector('.nav-menu');
 
+    // CONVERT TO ARRAY SO WE CAN MAP CHILD ELEMENTS
+    const navChilds = Array.from(navMenu.children); 
     setWindowWidth();
 
 
@@ -44,12 +49,6 @@ window.addEventListener('DOMContentLoaded', (evt) => {
     /***************************************************
     *********** NAV MENU FUNCTIONALITY *****************
     ****************************************************/
-    // NAV MENU FUNCTIONALITY
-    const navMenu = document.querySelector('.nav-menu');
-
-    // CONVERT TO ARRAY SO WE CAN MAP CHILD ELEMENTS
-    const navChilds = Array.from(navMenu.children); 
-    let isNavOpen = false;
 
 
     let menuClick = e => {
@@ -93,18 +92,17 @@ window.addEventListener('DOMContentLoaded', (evt) => {
     // nav
     function navMenuToggleStyles() {
         navMenu.classList.toggle('active-phone-nav');
-        navChilds.map( child => child.classList.toggle( 'active-phone__children') );
+        navChilds.map( child => child.classList.toggle('active-phone__children') );
     }
     // default nav
     function defaultHamburgerMenu() {
         isNavOpen = false;
         navMenu.classList.remove('active-phone-nav');
-        navChilds.map( child => child.classList.remove( 'active-phone__children') );
+        navChilds.map( child => child.classList.remove('active-phone__children') );
     }
     // resize
     function setWindowWidth() {
         windowWidth = window.innerWidth;
-        console.log('WINDOW WIDTH: ', windowWidth);
         windowWidth <= 600 ? isPhoneSize = true : isPhoneSize = false;
         
         // IF USER DECIDES TO CHANGE PHONE WIDTH TO LANDSCAPE OR WINDOW RESIZED BIGGER
