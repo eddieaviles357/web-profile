@@ -54,6 +54,10 @@
     background-color: $color-primary-light;
 
     border-radius: .5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__items {
