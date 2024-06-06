@@ -244,6 +244,11 @@ body {
   overflow: hidden !important;
   box-shadow: 0.3rem 0.3rem 0 #000 !important;
   background-color: #f1d032 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .btn {
@@ -444,6 +449,12 @@ body {
 @media only screen and (max-width: 56.25em) {
   .about {
     max-height: none;
+    height: 105%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about {
+    height: 105;
   }
 }
 .about__section {
@@ -688,6 +699,9 @@ body {
     background-color: #726fd5;
     border-radius: 0.5rem;
   }
+  .nav-menu:hover {
+    cursor: pointer;
+  }
 }
 .nav-menu__items {
   padding: 0 1rem;
@@ -713,6 +727,7 @@ body {
     transition: none;
     transform: none;
     box-shadow: 0.3rem 0.3rem 0 #000;
+    cursor: pointer;
   }
 }
 .nav-menu__items > a {

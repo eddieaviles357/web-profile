@@ -8,7 +8,11 @@
     height: auto;
 
     @include respond(tab-port) {
-    max-height: none;
+        max-height: none;
+        height: 105%;
+    }
+    @include respond(phone) {
+        height: 105;
     }
 
     &__section {
