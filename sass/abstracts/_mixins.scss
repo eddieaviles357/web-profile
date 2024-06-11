@@ -4,6 +4,12 @@
   }
 }
 
+@mixin flexCenter {
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+}
+
 @mixin absCenter {
   position: absolute;
   top: 50%;
