@@ -1,9 +1,15 @@
 window.addEventListener('DOMContentLoaded', (evt) => {
     let windowWidth = window.innerWidth;
     let isPhoneSize;
-    let isNavOpen = false;
     // NAV MENU FUNCTIONALITY
+    let isNavOpen = false;
+    const navContainer = document.querySelector('.navigation__container');
     const navMenu = document.querySelector('.nav-menu');
+    // CREATE AN LI ELEMENT THAT WILL BE USED TO CLOSE THE HAMBUGER MENU
+    const closeNavMenuBtn = document.createElement('li');
+    closeNavMenuBtn.appendChild(document.createTextNode('X'));
+    closeNavMenuBtn.classList.add('nav-close');
+    navMenu.appendChild( closeNavMenuBtn );
 
     // CONVERT TO ARRAY SO WE CAN MAP CHILD ELEMENTS
     const navChilds = Array.from(navMenu.children); 
@@ -52,6 +58,7 @@ window.addEventListener('DOMContentLoaded', (evt) => {
 
 
     let menuClick = e => {
+        closeNavMenuBtn.classList.add('flex-center');
         if (!isPhoneSize) return; 
         if (isNavOpen === false) {
             isNavOpen = true;
@@ -59,6 +66,7 @@ window.addEventListener('DOMContentLoaded', (evt) => {
             return;
         }
         const target = e.target;
+        console.log(target);
 
         switch (target.tagName) {
             case 'UL': 
@@ -77,6 +85,8 @@ window.addEventListener('DOMContentLoaded', (evt) => {
                 target.click();
                 defaultHamburgerMenu();
                 break;
+            case 'DIV':
+                console.log('DIV HIT IS NAV OPEN', isNavOpen)
             default:
                 console.log('default');
             }
