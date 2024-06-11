@@ -40,7 +40,7 @@
   transition: all .1s;
 
   @include respond(phone) {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     min-width: 10rem;
@@ -95,6 +95,7 @@
 }
 
 .logo {
+  position: fixed;
   color: $color-black !important;
   line-height: 0;
 
@@ -113,5 +114,21 @@
   & svg {
     height: 5rem;
     width: 5rem;
+  }
+}
+
+.nav-close {
+  display: none;
+
+  @include respond(phone) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    background-color: white;
+    width: 7rem;
+    height: 7rem;
+
+    cursor: pointer;
   }
 }
