@@ -92,6 +92,11 @@
   text-transform: uppercase;
 }
 
+// HEIGHT
+.auto-height {
+  height: auto !important;
+}
+
 // IN-VIEW-SCROLL
 .scroll-left-fade {
   transform: translateX(10rem);
@@ -144,3 +149,4 @@
   justify-content: center !important;
   align-items: center !important;
 }
+
