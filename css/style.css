@@ -130,6 +130,12 @@ body {
   }
 }
 
+.flex-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
 .header-font {
   font-family: "Protest Riot", sans-serif;
 }
@@ -188,6 +194,10 @@ body {
 
 .capitalize {
   text-transform: uppercase;
+}
+
+.auto-height {
+  height: auto !important;
 }
 
 .scroll-left-fade {
@@ -686,7 +696,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .nav-menu {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     min-width: 10rem;
@@ -735,6 +745,7 @@ body {
 }
 
 .logo {
+  position: fixed;
   color: #000 !important;
   line-height: 0;
   background-color: #f1dda6;
@@ -752,6 +763,22 @@ body {
 .logo svg {
   height: 5rem;
   width: 5rem;
+}
+
+.nav-close {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .nav-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    background-color: white;
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+  }
 }
 
 .section-projects {
