@@ -19,6 +19,10 @@
   }
 }
 
+// FLEX CENTER ALIGN TEXT
+.flex-center {
+  @include flexCenter;
+}
 
 // HEADER_FONT
 .header-font {
