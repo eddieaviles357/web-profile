@@ -659,7 +659,7 @@ body {
 
 .navigation {
   background-color: rgba(0, 0, 0, 0);
-  position: absolute;
+  position: fixed;
   width: 100%;
   overflow: hidden;
   z-index: 99;
@@ -745,7 +745,7 @@ body {
 }
 
 .logo {
-  position: fixed;
+  position: relative;
   color: #000 !important;
   line-height: 0;
   background-color: #f1dda6;
@@ -756,6 +756,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .logo {
+    position: fixed;
     margin-top: 1rem;
     align-self: flex-start;
   }
