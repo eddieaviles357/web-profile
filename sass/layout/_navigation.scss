@@ -1,6 +1,6 @@
 .navigation {
   background-color: rgba(0, 0, 0, 0);
-  position: absolute;
+  position: fixed;
   width: 100%;
   overflow: hidden;
   z-index: 99;
@@ -20,6 +20,7 @@
     @include respond(tab-port) {
       padding: 0 3rem;
     }
+
     @include respond(phone) {
       height: 26rem;
     }
@@ -45,7 +46,7 @@
     top: 0;
     min-width: 10rem;
     margin: 1rem 1rem 0 0;
-    
+
     flex-direction: column;
     height: 7rem;
     min-height: 7rem;
@@ -79,7 +80,7 @@
       transition: all 0.2s;
       transform: scale(1.2) rotate(5deg);
       box-shadow: .5rem .5rem .5rem .1rem $color-black;
-      
+
       @include respond(phone) {
         transition: none;
         transform: none;
@@ -95,7 +96,7 @@
 }
 
 .logo {
-  position: fixed;
+  position: relative;
   color: $color-black !important;
   line-height: 0;
 
@@ -107,6 +108,7 @@
   box-shadow: 1rem 1rem 0 $color-black;
 
   @include respond(phone) {
+    position: fixed;
     margin-top: 1rem;
     align-self: flex-start;
   }
