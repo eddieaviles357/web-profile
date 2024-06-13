@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (evt) => {
     const closeNavMenuBtn = document.createElement('li');
     closeNavMenuBtn.appendChild(document.createTextNode('X'));
     closeNavMenuBtn.classList.add('nav-close');
-    navMenu.appendChild( closeNavMenuBtn );
+    // navMenu.appendChild( closeNavMenuBtn );
 
     // CONVERT TO ARRAY SO WE CAN MAP CHILD ELEMENTS
     const navChilds = Array.from(navMenu.children); 
@@ -59,6 +59,7 @@ window.addEventListener('DOMContentLoaded', (evt) => {
 
     let menuClick = e => {
         closeNavMenuBtn.classList.add('flex-center');
+        navMenu.appendChild( closeNavMenuBtn );
         if (!isPhoneSize) return; 
         if (isNavOpen === false) {
             isNavOpen = true;
@@ -74,12 +75,8 @@ window.addEventListener('DOMContentLoaded', (evt) => {
                 break;
             case 'LI':
                 isNavOpen = false;
-                if(isNavClose(target)) {
-                    console.log('TARGET: ', target)
-                } else {
-                    target.firstChild.click();
-                    defaultHamburgerMenu();
-                }
+                if(!isNavCloseElement(target)) target.firstChild.click();
+                defaultHamburgerMenu();
                 break;
             case 'A':
                 isNavOpen = false;
@@ -89,7 +86,7 @@ window.addEventListener('DOMContentLoaded', (evt) => {
             default:
                 console.log('default');
             }
-                
+            // navMenu.removeChild(closeNavMenuBtn);
     }
 
     navMenu.addEventListener('click', menuClick );
@@ -102,7 +99,7 @@ window.addEventListener('DOMContentLoaded', (evt) => {
     function navMenuToggleStyles() {
         navMenu.classList.toggle('active-phone-nav');
         navChilds.map( child => {
-            if (isNavClose(child)) return;
+            if (isNavCloseElement(child)) return;
             child.classList.toggle('active-phone__children')
         })
     }
@@ -111,6 +108,10 @@ window.addEventListener('DOMContentLoaded', (evt) => {
         isNavOpen = false;
         navMenu.classList.remove('active-phone-nav');
         navChilds.map( child => child.classList.remove('active-phone__children') );
+        // console.log('CLOSE_NAV_MENU_BTN', closeNavMenuBtn);
+        // console.log('NAV_MENU', navMenu);
+        console.log('CONTAINS_CLOSE_NAV_MENU_BTN',navMenu.contains(closeNavMenuBtn))
+        if (navMenu.contains(closeNavMenuBtn)) navMenu.remove(closeNavMenuBtn);
     }
     // resize -> VOID
     function setWindowWidth() {
@@ -124,9 +125,9 @@ window.addEventListener('DOMContentLoaded', (evt) => {
     }
 
     // element nav close functionality -> BOOLEAN
-    function isNavClose(ele) {
-        const isNavClose = !!ele.classList.contains('nav-close');
-        return isNavClose;
+    function isNavCloseElement(ele) {
+        const isNavCloseElement = !!ele.classList.contains('nav-close');
+        return isNavCloseElement;
     }
 
 });
