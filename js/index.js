@@ -71,22 +71,23 @@ window.addEventListener('DOMContentLoaded', (evt) => {
         switch (target.tagName) {
             case 'UL': 
                 isNavOpen = false;
-                defaultHamburgerMenu();
+                // defaultHamburgerMenu();
                 break;
             case 'LI':
                 isNavOpen = false;
                 if(!isNavCloseElement(target)) target.firstChild.click();
-                defaultHamburgerMenu();
+                // defaultHamburgerMenu();
                 break;
             case 'A':
                 isNavOpen = false;
                 target.click();
-                defaultHamburgerMenu();
+                // defaultHamburgerMenu();
                 break;
             default:
                 console.log('default');
             }
             // navMenu.removeChild(closeNavMenuBtn);
+            defaultHamburgerMenu();
     }
 
     navMenu.addEventListener('click', menuClick );
@@ -108,10 +109,8 @@ window.addEventListener('DOMContentLoaded', (evt) => {
         isNavOpen = false;
         navMenu.classList.remove('active-phone-nav');
         navChilds.map( child => child.classList.remove('active-phone__children') );
-        // console.log('CLOSE_NAV_MENU_BTN', closeNavMenuBtn);
-        // console.log('NAV_MENU', navMenu);
         console.log('CONTAINS_CLOSE_NAV_MENU_BTN',navMenu.contains(closeNavMenuBtn))
-        if (navMenu.contains(closeNavMenuBtn)) navMenu.remove(closeNavMenuBtn);
+        if (navMenu.contains(closeNavMenuBtn)) navMenu.removeChild(closeNavMenuBtn);
     }
     // resize -> VOID
     function setWindowWidth() {
