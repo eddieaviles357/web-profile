@@ -119,6 +119,7 @@
   }
 }
 
+// Button that closes hamburger menu
 .nav-close {
   display: none;
 
@@ -126,10 +127,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 3rem;
+    font-size: 5rem;
     background-color: white;
     width: 7rem;
     height: 7rem;
+
+    background-color: $transparent;
+    color: $color-black;
 
     cursor: pointer;
   }
