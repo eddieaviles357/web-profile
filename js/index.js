@@ -1,9 +1,9 @@
 window.addEventListener('DOMContentLoaded', (evt) => {
-    let windowWidth;
-    let isPhoneSize;
+    // let windowWidth = 0;
+    // let isPhoneSize = false;
 
     // NAV MENU FUNCTIONALITY
-    let isNavOpen = false;
+    // let isNavOpen = false;
     const navMenu = document.querySelector('.nav-menu');
 
     // CREATE AN LI ELEMENT THAT WILL BE USED TO CLOSE THE HAMBUGER MENU
@@ -13,6 +13,16 @@ window.addEventListener('DOMContentLoaded', (evt) => {
 
     // CONVERT TO ARRAY SO WE CAN MAP CHILD ELEMENTS
     const navChilds = Array.from(navMenu.children); 
+
+    const globalVariables = {
+        windowWidth: getWindowWidth(),
+        isPhoneSize: false,
+        isNavOpen: false,
+        navMenu: document.querySelector('.nav-menu'),
+        closeNavMenuBtn,
+        navChilds,
+    }
+
     setWindowWidth();
 
 
@@ -23,98 +33,69 @@ window.addEventListener('DOMContentLoaded', (evt) => {
 
 
     /***************************************************
-    ************** NTERSECTION OBSERVER ****************
-    ****************************************************/
-    const options = {
-        root: null,
-        threshold: 0,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('scroll-in-view');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, options);
-
-    const sections = Array.from(document.getElementsByClassName('container'));
-    for (let section of sections) {
-        observer.observe(section);
-    }
-
-    const footerSections = Array.from( document.getElementsByClassName('footer__nav-links--item') );
-
-    for (let footerSection of footerSections) {
-        observer.observe(footerSection);
-    }
-
-
-    /***************************************************
     *********** NAV MENU FUNCTIONALITY *****************
     ****************************************************/
 
 
     let menuClick = e => {
-        closeNavMenuBtn.classList.add('flex-center');
-        navMenu.appendChild( closeNavMenuBtn );
-        if (!isPhoneSize) return; 
-        if (isNavOpen === false) {
-            isNavOpen = true;
-            navMenuToggleStyles();
+        // Don't render hamburger menu
+        if (!globalVariables.isPhoneSize) return; 
+
+        // Render hamburger menu
+        globalVariables.closeNavMenuBtn.classList.add('flex-center');
+        globalVariables.navMenu.appendChild( globalVariables.closeNavMenuBtn );
+        if (globalVariables.isNavOpen === false) {
+            globalVariables.isNavOpen = true;
+            navMenuToggleStyles(globalVariables.navChilds);
             return;
         }
         const target = e.target;
 
         switch (target.tagName) {
-            case 'UL': 
-                isNavOpen = false;
-                break;
             case 'LI':
-                isNavOpen = false;
                 if(!isNavCloseElement(target)) target.firstChild.click();
                 break;
             case 'A':
-                isNavOpen = false;
                 target.click();
                 break;
             default:
                 console.log('default');
             }
-            defaultHamburgerMenu();
+            globalVariables.isNavOpen = defaultHamburgerMenu();
     }
 
-    navMenu.addEventListener('click', menuClick );
+    globalVariables.navMenu.addEventListener('click', menuClick );
 
 
     /***************************************************
     *********** UTILITY FUNCTIONS **********************
     ****************************************************/
     // nav -> VOID
-    function navMenuToggleStyles() {
-        navMenu.classList.toggle('active-phone-nav');
-        navChilds.map( child => {
+    function navMenuToggleStyles(navItems) {
+        toggleClassElem(globalVariables.navMenu, 'active-phone-nav');
+        navItems.map( child => {
             if (isNavCloseElement(child)) return;
-            child.classList.toggle('active-phone__children')
+            toggleClassElem(child, 'active-phone__children');
         })
     }
-    // default nav -> VOID
+    // default nav -> BOOLEAN
     function defaultHamburgerMenu() { 
-        isNavOpen = false;
-        navMenu.classList.remove('active-phone-nav');
-        navChilds.map( child => child.classList.remove('active-phone__children') );
-        if (navMenu.contains(closeNavMenuBtn)) navMenu.removeChild(closeNavMenuBtn);
+        removeClass(globalVariables.navMenu, 'active-phone-nav');
+        globalVariables.navChilds.map( child => removeClass(child, 'active-phone__children'));
+        if (globalVariables.navMenu.contains(globalVariables.closeNavMenuBtn)) globalVariables.navMenu.removeChild(globalVariables.closeNavMenuBtn);
+        return false;
     }
     // resize -> VOID
     function setWindowWidth() {
-        windowWidth = window.innerWidth;
-        windowWidth <= 600 ? isPhoneSize = true : isPhoneSize = false;
+        globalVariables.windowWidth = getWindowWidth();
+        globalVariables.windowWidth <= 600 ? globalVariables.isPhoneSize = true : globalVariables.isPhoneSize = false;
+        // windowWidth = getWindowWidth;
+        // windowWidth <= 600 ? isPhoneSize = true : isPhoneSize = false;
         
         // IF USER DECIDES TO CHANGE PHONE WIDTH TO LANDSCAPE OR WINDOW RESIZED BIGGER
-        if(!isPhoneSize || isPhoneSize === 'undefined') {
-            defaultHamburgerMenu()
+        if(!globalVariables.isPhoneSize || globalVariables.isPhoneSize === 'undefined') {
+            globalVariables.isNavOpen = defaultHamburgerMenu();
+            // isNavOpen = defaultHamburgerMenu()
         }
     }
 
@@ -123,7 +104,20 @@ window.addEventListener('DOMContentLoaded', (evt) => {
         const isNavCloseElement = !!ele.classList.contains('nav-close');
         return isNavCloseElement;
     }
+    // toggle class -> VOID
+    function toggleClassElem(ele, classStyle) {
+        ele.classList.toggle(classStyle);
+    }
 
+    // remove class -> VOID
+    function removeClass(ele, classStyle) {
+        ele.classList.remove(classStyle);
+    }
+
+    // getter -> NUMBER
+    function getWindowWidth() {
+        return window.innerWidth;
+    }
 });
 
 
