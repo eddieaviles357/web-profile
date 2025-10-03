@@ -107,14 +107,3 @@ Eduardo Aviles — author: `eduardo aviles` (see social links embedded in the fo
 ## License
 
 This project is published under the ISC license (see `package.json`).
-
----
-
-If you'd like, I can also:
-
-- add a small CONTRIBUTING.md with local dev steps and git conventions,
-- add a minimal GitHub Pages workflow, or
-- optimize the `package.json` scripts into a single `dev` command that runs both the server and watch in parallel.
-
-Tell me which of those you'd like next.
-\*\*Profile
