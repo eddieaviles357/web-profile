@@ -440,7 +440,7 @@ body {
 .parallax {
   min-height: 100%;
   width: 100%;
-  background-image: linear-gradient(to right bottom, rgba(114, 111, 213, 0.6), rgba(47, 40, 180, 0.3)), url("/img/header-main.jpg");
+  background-image: linear-gradient(to right bottom, rgba(114, 111, 213, 0.6), rgba(47, 40, 180, 0.3)), url("/img/header-main-2000.jpg");
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
