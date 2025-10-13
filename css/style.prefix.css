@@ -454,7 +454,7 @@ body {
 }
 @media only screen and (max-width: 56.25em) {
   .parallax {
-    background-image: linear-gradient(to right bottom, rgba(114, 111, 213, 0.6), rgba(47, 40, 180, 0.3)), url("/img/header-main-600.jpg");
+    background-image: linear-gradient(to right bottom, rgba(114, 111, 213, 0.6), rgba(47, 40, 180, 0.3)), url("/img/header-main-400.jpg");
   }
 }
 
