@@ -655,6 +655,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .header-title--sub {
     width: 100%;
+    letter-spacing: 0rem;
   }
 }
 @media only screen and (max-width: 56.25em) {

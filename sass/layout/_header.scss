@@ -53,6 +53,7 @@
 
       @include respond(phone) {
         width: 100%;
+        letter-spacing: 0rem;
       } 
 
       @include respond(tab-port) {
