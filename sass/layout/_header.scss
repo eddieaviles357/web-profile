@@ -51,11 +51,7 @@
       animation: fade-in-from-right 1s ease-in-out 1 both;
 
       @include respond(phone) {
-        width: 80%;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        padding: 0.5rem;
-        min-height: 12rem;
+        width: 100%;
       } 
 
       @include respond(tab-port) {
