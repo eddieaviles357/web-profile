@@ -651,6 +651,15 @@ body {
   transition: all 1s ease-in-out;
   animation: fade-in-from-right 1s ease-in-out 1 both;
 }
+@media only screen and (max-width: 37.5em) {
+  .header-title--sub {
+    width: 80%;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 0.5rem;
+    min-height: 12rem;
+  }
+}
 @media only screen and (max-width: 56.25em) {
   .header-title--sub {
     width: 90%;
