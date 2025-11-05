@@ -452,6 +452,21 @@ body {
   }
 }
 
+.skip-link {
+  font-size: 2rem;
+  background-color: #f1d032;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  position: absolute;
+  left: 0.5rem;
+  transform: translateY(-120%);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+.skip-link:focus, .skip-link:active {
+  transform: translateY(0);
+}
+
 .about {
   width: 100%;
   position: relative;
