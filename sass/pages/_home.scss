@@ -14,9 +14,9 @@
   }
 
   &__header {
-    @include header(35rem, $color-black, $color-secondary-dark);
-    @include pseudo-style(before, top, 0, left, 0, $color-secondary-dark, $color-black);
-    @include pseudo-style(after, top, 0, right, -6%, $color-secondary-dark, $color-black);
+    @include header(35rem, $color-primary-light, $color-secondary-dark);
+    @include pseudo-style(before, top, 0, left, 0, $color-secondary-dark, $color-primary-light);
+    @include pseudo-style(after, top, 0, right, -6%, $color-secondary-dark, $color-primary-light);
   }
 
 }
